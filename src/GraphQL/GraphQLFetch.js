@@ -6,7 +6,7 @@ function jsonDateReviver(key, value) {
 async function graphQLFetch(query, variables = {}) {
   //console.log(query, variables);
   try {
-    const response = await fetch("http://localhost:4000/graphql", {
+    const response = await fetch("https://emsbackend.herokuapp.com/graphql", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query, variables }),
