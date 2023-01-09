@@ -46,7 +46,7 @@ export default class EmployeeDirectory extends React.Component {
     }
     
     let variables = {employeeType : this.state.emp_type};
-    const result = employeeData("httpsgit ://emsbackend.herokuapp.com/graphql", query, variables ).then((result) => {
+    const result = employeeData("https://emsbackend.herokuapp.com/graphql", query, variables ).then((result) => {
       //console.log(result.data.employeeList);
       this.setState({ employees: result.data.employeeList });
       return result.data.employeeList;

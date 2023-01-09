@@ -12,6 +12,7 @@ async function graphQLFetch(query, variables = {}) {
       body: JSON.stringify({ query, variables }),
     });
 
+   
     const body = await response.text();
     const result = JSON.parse(body, jsonDateReviver);
     if (result.errors) {
